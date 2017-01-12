@@ -21,5 +21,10 @@ $(function(){
   	enlargeYourContainer: true
   });
 
-  $(".toolbar").css("padding-top",$(".drawing-board-controls").height());
+  $(".toolbar").css("padding-top",parseInt($(".drawing-board-controls").height())+5);
+
+  $(".layers-view").sortable({
+    revert:true
+  });
+  $("ul,li").disableSelection();
 });

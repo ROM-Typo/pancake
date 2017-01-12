@@ -19,6 +19,7 @@ if (!$_SESSION['password']) {
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/drawingboard.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/simple-undo.js"></script>
     <script src="file.js"></script>
@@ -44,12 +45,15 @@ if (!$_SESSION['password']) {
       <iframe src="temp/nofile.html" id="code" class="code"></iframe>
       <div class="toolbar">
         <div class="layers">
-          <div class="iframe" data-eid="code">
+          Layers:<br />
+          <ul class="layers-view">
+            <li class="layer" data-eid="code">
+              Website Preview
+            </li>
+            <li class="layer" data-eid="drawing-board">
 
-          </div>
-          <div class="draw" id="drawing-board">
-            
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

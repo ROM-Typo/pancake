@@ -80,4 +80,14 @@
   text-align:left;
   border-left:1px solid black;
   height:90%;
+  padding-left:8px;
+}
+.layers div {
+  background-color:rgb(196, 196, 196);
+  margin:3px;
+  padding:5px;
+}
+.layers {
+  background-color:rgb(177, 177, 177);
+  padding:3px;
 }
