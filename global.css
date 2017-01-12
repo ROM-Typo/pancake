@@ -1,0 +1,83 @@
+.project-files {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding:10px;
+  border-right:1px solid black;
+  width:10%;
+}
+.project-files .file::before {
+  content:'\f15b';
+  padding-right:2px;
+}
+.project-files .file {
+  cursor:pointer;
+}
+.project-files .folder::before {
+  content:'\f07b';
+  padding-right:2px;
+}
+.project-files .folder .folder-files {
+  margin-left:10px;
+}
+.header {
+  padding-left:10px;
+  border-bottom:1px solid black;
+}
+.header h1 {
+  cursor:context-menu;
+}
+.main {
+  position:fixed;
+  top:10%;
+  left:10%;
+  width:80%;
+  height:90%;
+}
+.main #drawing-board {
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:99999;
+}
+.main #drawing-board .drawing-board-canvas-wrapper {
+  opacity: 0.3;
+}
+.main .drawing-board-controls {
+  position:fixed;
+  top:10%;
+  left:90% !important;
+  width:10%;
+  text-align:left;
+  opacity:1 !important;
+}
+.main .drawing-board-controls > * {
+  display:inline-block;
+  max-width:28px;
+}
+.main .drawing-board-control-size-dropdown-current {
+  width:20px !important;
+}
+.main .drawing-board-controls-navigation button {
+  display:inline-block;
+}
+.main .code {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+.toolbar {
+  position:fixed;
+  top:10%;
+  left:90%;
+  text-align:left;
+  border-left:1px solid black;
+  height:90%;
+}
