@@ -27,4 +27,30 @@ $(function(){
     revert:true
   });
   $("ul,li").disableSelection();
+
+  $(".layer").each(function(){
+    $(this).find(".visible").change(function(){
+      if (!$(this).is(":checked")){
+        $("."+$(this).parents().eq(1).attr("data-eclass")).hide();
+      }else {
+        $("."+$(this).parents().eq(1).attr("data-eclass")).show();
+      }
+    });
+    $(this).find(".opacity").change(function(){
+      $("."+$(this).parents().eq(0).attr("data-eclass")).css("opacity",$(this).val()/100);
+    });
+  });
+
+  $(".layer").click(function(){
+    setTimeout(function(){
+      $(".layer").css("z-index","0");
+      $("."+$(".layers-view").children().eq(0).attr("data-eid")).css("z-index","9999");
+    },500);
+
+  });
+  $(".layer-relaod").click(function(){
+    $("#drawing-board").css("z-index","-1");
+    $("#code").css("z-index","-1");
+    $("#"+$(".layers-view").children().eq(0).attr("data-eid")).css("z-index","9999");
+  });
 });

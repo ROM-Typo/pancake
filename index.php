@@ -39,19 +39,25 @@ if (!$_SESSION['password']) {
     </div>
 
     <div class="main">
-      <div id="drawing-board">
+      <div id="drawing-board" style="z-index:9999;">
 
       </div>
-      <iframe src="temp/nofile.html" id="code" class="code"></iframe>
+      <iframe src="temp/nofile.html" id="code" class="code" style="z-index:-1;"></iframe>
       <div class="toolbar">
         <div class="layers">
-          Layers:<br />
+          Layers: <button class="layer-reload"><i class="fa fa-refresh"></i></button><br />
           <ul class="layers-view">
-            <li class="layer" data-eid="code">
-              Website Preview
+            <li class="layer" data-eclass="drawing-board-canvas-wrapper" data-eid="drawing-board">
+              Drawing Board<br />
+              <small>Visible: <input type="checkbox" class="visible" checked /></small><br />
+              <small>Opacity:</small><br />
+              <input type="range" min="1" max="100" value="30" class="opacity" />
             </li>
-            <li class="layer" data-eid="drawing-board">
-
+            <li class="layer" data-eclass="code" data-eid="code">
+              Website Preview<br />
+              <small>Visible: <input type="checkbox" class="visible" checked /></small><br />
+              <small>Opacity:</small><br />
+              <input type="range" min="1" max="100" value="100" class="opacity" />
             </li>
           </ul>
         </div>
